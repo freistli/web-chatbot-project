@@ -1,0 +1,46 @@
+/* This file contains the CSS styles for the webpage, including styles for the bubble icon and positioning of the chatbot. */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+#chatbot-iframe {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    width: 300px;
+    height: 100%;
+    border: none;
+    display: none; /* Initially hidden */
+    z-index: 1000;    
+}
+
+
+#bubble-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #0078d4; /* Bubble color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+#bubble-icon:hover {
+    background-color: #005a9e; /* Darker shade on hover */
+}
+
+#bubble-icon:before {
+    content: '💬'; /* Chat bubble icon */
+    font-size: 30px;
+    color: white;
+}
