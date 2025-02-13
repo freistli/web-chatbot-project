@@ -22,9 +22,9 @@ web-chatbot-project
 
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
-3. Follow steps 1~3 to get you the token endpoint URL from this official product document:
+3. Get the token endpoint URL based on this official product document (steps 1~3):
     
-   https://learn.microsoft.com/en-us/microsoft-copilot-studio/customize-default-canvas?tabs=web
+   https://learn.microsoft.com/en-us/microsoft-copilot-studio/customize-default-canvas?tabs=web#retrieve-token-endpoint
 
 4. Edit `src/agent.html`, change "Copilot_Studio_app_web_endpoint" to the real token URL.
 5. Open `src/index.html` in a web browser to view the project.
