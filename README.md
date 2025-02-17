@@ -20,6 +20,7 @@ web-chatbot-project
 
 ## Setup Instructions
 
+### Use Dedicated Token URL
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Get the token endpoint URL based on this official product document (steps 1~3):
@@ -28,7 +29,26 @@ web-chatbot-project
 
 4. Edit `src/agent.html`, change "Copilot_Studio_app_web_endpoint" to the real token URL.
 5. Open `src/index.html` in a web browser to view the project.
-6. To customize message bubble font or color, modify below code in agent.html
+
+### Enable Web Channel Security - Use Dynamic Token Generate Method
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Get Secret based on this official product document:
+
+   https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-web-security#enable-or-disable-web-channel-security
+
+4. Edit `src/agent_auth.html`, change "MY_TEST_SECRET" to the Secret value.
+
+IMPORTANT: The logic of using MY_TEST_SECRET to get [conversationId, token, expires_in] should happen on server side. For security purpose, the Secret info should not be exposed on client side. This client script used here is only for demo purpose.
+
+5. Open `src/index_auth.html` in a web browser to view the project.
+
+
+## Customize message bubble font or color
+
+![alt text](media/2.png)
+
+To customize message bubble font or color, modify below code in agent.html or agent_auth.html
 
 ```
 .webchat__text-content {

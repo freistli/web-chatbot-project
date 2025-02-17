@@ -77,9 +77,7 @@
            hideUploadButton: true
          };
 
-         // Specifies the token endpoint URL.
-         // To get this value, visit Copilot Studio > Settings > Channels > Mobile app page.
-         const tokenEndpointURL = new URL('Copilot_Studio_app_web_endpoint');
+         const tokenGenerate = new URL('https://directline.botframework.com/v3/directline/tokens/generate')
 
          // Specifies the language the agent and Web Chat should display in:
          // - (Recommended) To match the page language, set it to document.documentElement.lang
@@ -93,19 +91,16 @@
          // const locale = navigator.language || 'ja-JP'; // Uses user preferred language and fallback to Japanese.
          // const locale = 'zh-HAnt'; // Always use Chinese (Traditional).
 
-         const apiVersion = tokenEndpointURL.searchParams.get('api-version');
-
-         const [directLineURL, token] = await Promise.all([
-           fetch(new URL(`/powervirtualagents/regionalchannelsettings?api-version=${apiVersion}`, tokenEndpointURL))
-             .then(response => {
-               if (!response.ok) {
-                 throw new Error('Failed to retrieve regional channel settings.');
-               }
-
-               return response.json();
-             })
-             .then(({ channelUrlsById: { directline } }) => directline),
-           fetch(tokenEndpointURL)
+         const apiVersion = '2022-03-01-preview';
+         const directLineURL = 'https://directline.botframework.com';
+         const [result ] = await Promise.all([
+            
+           fetch(tokenGenerate,{
+                method: 'POST',
+                headers: {
+                  'Authorization': 'Bearer MY_TEST_SECRET'
+                }
+              })
              .then(response => {
                if (!response.ok) {
                  throw new Error('Failed to retrieve Direct Line token.');
@@ -113,7 +108,9 @@
 
                return response.json();
              })
-             .then(({ token }) => token)
+             .then(({ conversationId, token, expires_in  }) => {
+                return [conversationId, token, expires_in]                
+             })
          ]);
 
          // The "token" variable is the credentials for accessing the current conversation.
@@ -122,7 +119,10 @@
          // The token could have access to sensitive information about the user.
          // It must be treated like user password.
 
-         const directLine = WebChat.createDirectLine({ domain: new URL('v3/directline', directLineURL), token });
+         const token = result[1]; 
+         const conversationId = result[0];
+
+         const directLine = WebChat.createDirectLine({ domain: new URL('v3/directline', directLineURL), token: token});
 
          // Sends "startConversation" event when the connection is established.
 
@@ -131,6 +131,7 @@
              if (value === 2) {
                directLine
                  .postActivity({
+                   from: { name: 'myUserName' },
                    localTimezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
                    locale,
                    name: 'startConversation',
