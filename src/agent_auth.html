@@ -74,7 +74,14 @@
          // Please visit https://microsoft.github.io/BotFramework-WebChat for customization samples.
          const styleOptions = {
            // Hide upload button.
-           hideUploadButton: true
+           hideUploadButton: true,
+           accent: '#00809d',
+            botAvatarBackgroundColor: '#FFFFFF',
+            botAvatarImage: 'https://learn.microsoft.com/azure/bot-service/v4sdk/media/logo_bot.svg',
+            botAvatarInitials: 'BT',
+            userAvatarImage: 'https://avatars.githubusercontent.com/u/661465',
+            userAvatarInitials: 'WC'
+
          };
 
          const tokenGenerate = new URL('https://directline.botframework.com/v3/directline/tokens/generate')

@@ -11,7 +11,7 @@ body {
     position: fixed;
     top: 20px;
     right: 40px;
-    width: 300px;
+    width: 400px;
     height: 100%;
     border: none;
     display: none; /* Initially hidden */
