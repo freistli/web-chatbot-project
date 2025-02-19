@@ -44,7 +44,7 @@ IMPORTANT: The logic of using MY_TEST_SECRET to get [conversationId, token, expi
 5. Open `src/index_auth.html` in a web browser to view the project.
 
 
-## Customize message bubble font or color
+## Customize message bubble font, color, avatars
 
 ![alt text](media/2.png)
 
@@ -60,6 +60,23 @@ To customize message bubble font or color, modify below code in agent.html or ag
         background-color: #00a19c;
        }
 ```
+
+To customize avatars, modify styleOptions in agent.html or agent_auth.html
+
+```
+  const styleOptions = {
+           // Hide upload button.
+           hideUploadButton: true,
+           accent: '#00809d',
+            botAvatarBackgroundColor: '#FFFFFF',
+            botAvatarImage: 'https://learn.microsoft.com/azure/bot-service/v4sdk/media/logo_bot.svg',
+            botAvatarInitials: 'BT',
+            userAvatarImage: 'https://avatars.githubusercontent.com/u/661465',
+            userAvatarInitials: 'WC'
+
+         };
+```
+
 
 ## Usage
 
