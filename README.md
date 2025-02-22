@@ -43,6 +43,20 @@ IMPORTANT: The logic of using MY_TEST_SECRET to get [conversationId, token, expi
 
 5. Open `src/index_auth.html` in a web browser to view the project.
 
+### Use Authentication inside Agent in Web Channel
+
+Follow below two document guides:
+
+
+https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-authentication-azure-ad
+
+
+https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-user-authentication#authenticate-manually
+
+
+![alt text](media/3.png)
+
+
 
 ## Customize message bubble font, color, avatars
 
@@ -76,7 +90,6 @@ To customize avatars, modify styleOptions in agent.html or agent_auth.html
 
          };
 ```
-
 
 ## Usage
 
