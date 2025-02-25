@@ -104,6 +104,8 @@ document.documentElement.lang = navigator.language ;
 const locale = document.documentElement.lang || 'en';
 ```
 
+![alt text](media/4.png)
+
 ## Usage
 
 - The chatbot is embedded in the right corner of the webpage.
