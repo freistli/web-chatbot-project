@@ -1,5 +1,4 @@
 <!doctype html>
- <html lang="en">
    <head>
      <title>Contoso Sample Web Chat</title>
      <!--
@@ -95,6 +94,7 @@
 
          // Setting page language is highly recommended.
          // When page language is set, browsers will use native font for the respective language.
+         document.documentElement.lang = navigator.language ;
 
          const locale = document.documentElement.lang || 'en'; // Uses language specified in <html> element and fallback to English (United States).
          // const locale = navigator.language || 'ja-JP'; // Uses user preferred language and fallback to Japanese.

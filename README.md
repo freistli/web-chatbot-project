@@ -91,6 +91,19 @@ To customize avatars, modify styleOptions in agent.html or agent_auth.html
          };
 ```
 
+## Multiple Languages Support
+
+Follow this guide firstly:
+https://learn.microsoft.com/en-us/microsoft-copilot-studio/multilingual
+
+And in agent.html or agent_auth.html, ensure the local variable is set to Browser language properly. In this sample, it is set by default:
+
+```
+document.documentElement.lang = navigator.language ;
+
+const locale = document.documentElement.lang || 'en';
+```
+
 ## Usage
 
 - The chatbot is embedded in the right corner of the webpage.
