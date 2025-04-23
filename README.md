@@ -26,47 +26,9 @@ web-chatbot-project
 └── README.md             # Project documentation
 ```
 
-## Setup Instructions
+## How it works
 
-### Use Dedicated Token URL
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Get the token endpoint URL based on this official product document (steps 1~3):
-    
-   https://learn.microsoft.com/en-us/microsoft-copilot-studio/customize-default-canvas?tabs=web#retrieve-token-endpoint
-
-4. Edit `src/agent.html`, change "Copilot_Studio_app_web_endpoint" to the real token URL.
-5. Open `src/index.html` in a web browser to view the project.
-
-### Enable Web Channel Security - Use Dynamic Token Generate Method
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Get Secret based on this official product document:
-
-   https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-web-security#enable-or-disable-web-channel-security
-
-4. Edit `src/agent_auth.html`, change "MY_TEST_SECRET" to the Secret value.
-
-IMPORTANT: The logic of using MY_TEST_SECRET to get [conversationId, token, expires_in] should happen on server side. For security purpose, the Secret info should not be exposed on client side. This client script used here is only for demo purpose.
-
-5. Open `src/index_auth.html` in a web browser to view the project.
-
-### Use Authentication inside Agent in Web Channel
-
-Follow below two document guides:
-
-
-https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-authentication-azure-ad
-
-
-https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-user-authentication#authenticate-manually
-
-
-![alt text](media/3.png)
-
-
-
-## Customize message bubble font, color, avatars
+### 1. Customize message bubble font, color, avatars
 
 ![alt text](media/2.png)
 
@@ -99,7 +61,7 @@ To customize avatars, modify styleOptions in agent.html or agent_auth.html
          };
 ```
 
-## Multiple Languages Support
+### 2. Multiple Languages Support
 
 Follow this guide firstly:
 https://learn.microsoft.com/en-us/microsoft-copilot-studio/multilingual
@@ -113,6 +75,45 @@ const locale = document.documentElement.lang || 'en';
 ```
 
 ![alt text](media/4.png)
+
+### 4. Use Dedicated token for the web chat widget
+
+#### 4.1 Get Dedicated Token from URL
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Get the token endpoint URL based on this official product document (steps 1~3):
+    
+   https://learn.microsoft.com/en-us/microsoft-copilot-studio/customize-default-canvas?tabs=web#retrieve-token-endpoint
+
+4. Edit `src/agent.html`, change "Copilot_Studio_app_web_endpoint" to the real token URL.
+5. Open `src/index.html` in a web browser to view the project.
+
+#### 4.2 For anonymous users - enable Web Channel Security - Use Dynamic Token Generate Method
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Get Secret based on this official product document:
+
+   https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-web-security#enable-or-disable-web-channel-security
+
+4. Edit `src/agent_auth.html`, change "MY_TEST_SECRET" to the Secret value.
+
+IMPORTANT: The logic of using MY_TEST_SECRET to get [conversationId, token, expires_in] should happen on server side. For security purpose, the Secret info should not be exposed on client side. This client script used here is only for demo purpose.
+
+5. Open `src/index_auth.html` in a web browser to view the project.
+
+#### 4.3 For authenticated users:  Use Authentication inside Agent in Web Channel
+
+Follow below two document guides:
+
+https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-authentication-azure-ad
+
+https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-user-authentication#authenticate-manually
+
+
+![alt text](media/3.png)
+
+
+
 
 ## Usage
 
