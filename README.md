@@ -1,6 +1,15 @@
 # Web Chatbot Project
 
-This project implements a simple web page that embeds a chatbot in the right corner, featuring a bubble icon to toggle its visibility.
+This project extends the Microsoft Copilot Studio Agent chat widget that is published on a "web channel" to a website so it can provide web based chat interface with a Copilot Agents.  
+https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-web-channels
+
+Note -- this is not the same as an agent connected to Microsot 365 Teams or other interfaces -- this is designed for external authenticed or anonymous users.  
+
+The main enhancements are:
+1. Customized font, colors and avatar
+2. Align chat widget to float in bottom right corner
+3. Support multiple languages (leverage browser language settings)
+4. Use SSO (Single Sign On) or Dynamic Auth Tokens to secure the communications channel
 
 ![alt text](media/1.png)
 
