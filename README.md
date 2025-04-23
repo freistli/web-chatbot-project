@@ -6,10 +6,9 @@ https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-b
 Note -- this is not the same as an agent connected to Microsot 365 Teams or other interfaces -- this is designed for external authenticed or anonymous users.  
 
 The main enhancements are:
-1. Customized font, colors and avatar
-2. Align chat widget to float in bottom right corner
-3. Support multiple languages (leverage browser language settings)
-4. Use SSO (Single Sign On) or Dynamic Auth Tokens to secure the communications channel
+1. Customized font, colors and avatar (for the default position of the widget in bottom right corner)
+2. Support multiple languages (leverage browser language settings)
+3. Use SSO (Single Sign On) or Dynamic Auth Tokens to secure the communications channel
 
 ![alt text](media/1.png)
 
