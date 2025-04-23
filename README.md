@@ -26,7 +26,7 @@ web-chatbot-project
 └── README.md             # Project documentation
 ```
 
-## How it works
+## How each enhancement works
 
 ### 1. Customize message bubble font, color, avatars
 
@@ -76,9 +76,10 @@ const locale = document.documentElement.lang || 'en';
 
 ![alt text](media/4.png)
 
-### 4. Use Dedicated token for the web chat widget
+### 3. Use Dedicated token for the web chat widget
 
-#### 4.1 Get Dedicated Token from URL
+Get Dedicated Token from URL:
+
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Get the token endpoint URL based on this official product document (steps 1~3):
@@ -88,7 +89,7 @@ const locale = document.documentElement.lang || 'en';
 4. Edit `src/agent.html`, change "Copilot_Studio_app_web_endpoint" to the real token URL.
 5. Open `src/index.html` in a web browser to view the project.
 
-#### 4.2 For anonymous users - enable Web Channel Security - Use Dynamic Token Generate Method
+#### 3.1 For anonymous users - enable Web Channel Security - Use Dynamic Token Generate Method
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Get Secret based on this official product document:
@@ -101,7 +102,7 @@ IMPORTANT: The logic of using MY_TEST_SECRET to get [conversationId, token, expi
 
 5. Open `src/index_auth.html` in a web browser to view the project.
 
-#### 4.3 For authenticated users:  Use Authentication inside Agent in Web Channel
+#### 3.2 For authenticated users:  Use Authentication inside Agent in Web Channel
 
 Follow below two document guides:
 
