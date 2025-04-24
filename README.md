@@ -1,6 +1,6 @@
 # Web Chatbot Project
 
-This project extends the Microsoft Copilot Studio Agent chat widget that is published on a "web channel/direct channel" to a website so it can provide web based chat interface with a Copilot Agents.  
+This project extends the **Microsoft Copilot Studio Agent** chat widget that is published on a "web channel/direct channel" to a website so it can provide web based chat interface with a Copilot Agents.  
 
 Note -- this is not the same as an agent connected to Microsot 365 Teams or other interfaces -- this is designed for external authenticed or anonymous users.  
 
@@ -38,12 +38,12 @@ c. Get the agent web channel endpoint based on:
 d. Edit `src/index.html`, change "./agent.html" to yours web channel endpoint. 
 
 
-![alt text](media/1.png)
+<img src="media/1.1.png" alt="alt text" width="300"/>
 
 
 ### 2. Customize message bubble font, color, avatars
 
-![alt text](media/2.png)
+<img src="media/2.1.png" alt="alt text" width="300"/>
 
 a. Get Secret based on this official product document for Dynamic Token Generation:
 
@@ -97,7 +97,7 @@ document.documentElement.lang = navigator.language ;
 const locale = document.documentElement.lang || 'en';
 ```
 
-![alt text](media/4.png)
+<img src="media/3.1.png" alt="alt text" width="300"/>
 
 
 #### 4 For authenticated users:  Use Authentication inside Agent in Web Channel
@@ -109,7 +109,7 @@ https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-authent
 https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-user-authentication#authenticate-manually
 
 
-![alt text](media/3.png)
+<img src="media/4.1.png" alt="alt text" width="300"/>
 
 
 ### 5. Use Dedicated token for the web chat widget (this method is deprecated from Copilot Studio Channel Setting) 
