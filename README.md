@@ -30,7 +30,9 @@ web-chatbot-project
 ### 1. Make Chat UI be a bubble icon which visibility can be togglled at the bottom right corner
 
 a. Clone the repository to your local machine.
+
 b. Navigate to the project directory.
+
 c. Get the agent web channel endpoint based on:
 
    https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-web-channels
@@ -100,7 +102,7 @@ const locale = document.documentElement.lang || 'en';
 <img src="media/3.1.png" alt="alt text" width="300"/>
 
 
-#### 4 For authenticated users:  Use Authentication inside Agent in Web Channel
+### 4 For authenticated users:  Use Authentication inside Agent in Web Channel
 
 Follow below two document guides:
 
@@ -116,14 +118,17 @@ https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-use
 
 Get Dedicated Token from URL:
 
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Get the token endpoint URL based on this official product document (steps 1~3):
+a. Clone the repository to your local machine.
+
+b. Navigate to the project directory.
+
+c. Get the token endpoint URL based on this official product document (steps 1~3):
     
    https://learn.microsoft.com/en-us/microsoft-copilot-studio/customize-default-canvas?tabs=web#retrieve-token-endpoint
 
-4. Edit `src/agent.html`, change "Copilot_Studio_app_web_endpoint" to the real token URL.
-5. Open `src/index.html` in a web browser to view the project.
+d. Edit `src/agent.html`, change "Copilot_Studio_app_web_endpoint" to the real token URL.
+
+e. Open `src/index.html` in a web browser to view the project.
 
 
 ## Usage
